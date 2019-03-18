@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 165px;
+}
+  .socials__item {
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+  .socials__item--instagram{
+    width: 25px;
+    height: 25px;
+  }
+  .socials__item--vkontakte {
+    width: 31px;
+    height: 19px;
+  }
+  .socials__item--github {
+    width: 27px;
+    height: 23px;
+  }
