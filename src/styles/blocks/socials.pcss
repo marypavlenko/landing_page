@@ -2,21 +2,36 @@
   display: flex;
   justify-content: space-between;
   width: 165px;
+
+  @include desktopHd() {
+    margin-right: 5%;
+  }
+  @include tablets() {
+  margin-left: 30%;
+  }
+  @include phones() {
+    display: none;
+  }
 }
-  .socials__item {
-    border: 0;
-    background-color: transparent;
-    background-repeat: no-repeat;
-  }
-  .socials__item--instagram{
-    width: 25px;
-    height: 25px;
-  }
-  .socials__item--vkontakte {
-    width: 31px;
-    height: 19px;
-  }
-  .socials__item--github {
-    width: 27px;
-    height: 23px;
-  }
+.socials__item {
+  border: 0;
+  fill: $text-color;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.socials__item--instagram{
+  width: 25px;
+  height: 25px;
+}
+.socials__item--vkontakte {
+  width: 31px;
+  height: 19px;
+}
+.socials__item--github {
+  width: 27px;
+  height: 23px;
+}
+
+.socials__item:hover {
+  fill: $links-color;
+}

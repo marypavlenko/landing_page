@@ -1,0 +1,6 @@
+- var navMenu = [{title: "Home", link: "#"}, {title: "About", link: "#"}, {title: "Skills", link: "#"}, {title: "Projects", link: "#"}, {title: "Reviews", link: "#"}, {title: "Contacts", link: "#"}]
+nav.nav-menu
+    ul.nav-menu__list
+        each item in navMenu
+            li.nav-menu__item
+                a.nav-menu__link(href=item.link)= item.title

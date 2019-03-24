@@ -1,13 +1,26 @@
 .header {
-  margin: 65px 20px;
-  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
 }
-  .button__burger {
-    display: flex;
-    border: 0;
-    width: 24px;
-    height: 20px;
-    background-image: url(/src/images/icons/menu.png);
-    background-color: transparent;
-    background-repeat: no-repeat;
+.button__burger {
+  border: 0;
+  width: 24px;
+  height: 25px;
+  margin-right: 5%;
+  background-image: url(/src/images/icons/menu.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  @include desktopHd() {
+    display: none;
   }
+  @include desktop() {
+    display: none;
+  }
+  @include tablets() {
+    display: block;
+  }
+}

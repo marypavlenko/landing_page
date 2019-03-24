@@ -1,44 +1,44 @@
 .nav-mobile {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: $text-color;
 
   @media (min-width: 768px) {
     display: none;
   }
 }
-  .nav-mobile__close-btn {
-    display: none;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url(/src/images/icons/cross.svg);
+.nav-mobile__close-btn {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/images/icons/cross.svg);
 
-    @media (min-width: 768px) {
-      display: none;
-    }
+  @media (min-width: 768px) {
+    display: none;
   }
-  .nav-mobile__list {
-    display: flex;
-    flex-direction: column;
-    margin-left: 25px;
-    align-items: start;
-  }
-  .nav-mobile__item {
-    color: #414c63;
-    font-weight: 600;
-    font-size: 18px;
-    color: #414c63;
-    line-height: 48px;
-  }
-  .nav-mobile__link {
-    text-decoration: none;
-  }
-  .nav-mobile__link:hover {
-    color: #5500f2;
-    text-decoration: underline;
-  }
+}
+.nav-mobile__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  align-items: start;
+}
+.nav-mobile__item {
+  color: #414c63;
+  font-weight: 600;
+  font-size: 18px;
+  color: #414c63;
+  line-height: 48px;
+}
+.nav-mobile__link {
+  text-decoration: none;
+}
+.nav-mobile__link:hover {
+  color: #5500f2;
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+.nav-menu {
+    @include tablets() {
+        display: none;
+    }
+}
+.nav-menu__list {
+    display: flex;
+    justify-content: center;
+}
+.nav-menu__item {
+    flex-wrap: nowrap;
+    margin: 10% 10%;
+
+    @include desktop() {
+        margin: auto 20px;
+    }
+}
+.nav-menu__link {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    text-decoration: none;
+}
+.nav-menu__link:hover {
+    color: $links-color;
+    font-weight: 600;
+    text-decoration: underline;
+}
