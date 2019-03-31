@@ -1,0 +1,20 @@
+.parallax-budda {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 180vh;
+  min-height: 1740px;
+  overflow: hidden;
+}
+.parallax-budda__layer {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  clip-path: polygon(0% 0%, 0% 80%, 50% 100%, 100% 80%, 100% 0%);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablets() {
+    background-position: 50%;
+  }
+}

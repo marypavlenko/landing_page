@@ -7,7 +7,7 @@
   bottom: 0;
   background-color: $text-color;
 
-  @media (min-width: 768px) {
+  @include tablets() {
     display: none;
   }
 }
@@ -18,7 +18,7 @@
   height: 20px;
   background-image: url(/src/images/icons/cross.svg);
 
-  @media (min-width: 768px) {
+  @include tablets() {
     display: none;
   }
 }
@@ -29,16 +29,15 @@
   align-items: start;
 }
 .nav-mobile__item {
-  color: #414c63;
+  color: $text-color;
   font-weight: 600;
   font-size: 18px;
-  color: #414c63;
   line-height: 48px;
 }
 .nav-mobile__link {
   text-decoration: none;
 }
 .nav-mobile__link:hover {
-  color: #5500f2;
+  color: $links-color-hover;
   text-decoration: underline;
 }
