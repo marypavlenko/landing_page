@@ -5,47 +5,24 @@
         .skills__frontend
             h2.skills__frontend-title Front-end
             .skills__circles
-                .skills__circles--item.skills__circles--html
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-html(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text HTML5
-                .skills__circles--item.skills__circles--css
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-css(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text CSS3
-                .skills__circles--item.skills__circles--js
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-js(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text Javascript
-                .skills__circles--item.skills__circles--jquery
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-jquery(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text Jquery & Vue.js
+
+                mixin skill(text, mod)
+                    div(class='skills__item skills__item--' + mod)
+                        svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
+                            circle.skills__back(r='45' cx='50%' cy='50%')
+                            circle(class='skills__front skills__front--' + mod r='45' cx='50%' cy='50%')
+                        .skills__circles--text=text
+
+                +skill('HTML5', 'html')
+                +skill('CSS3', 'css')
+                +skill('Javascript', 'javascript')
+                +skill('Jquery & Vue.js', 'jquery')
         .skills__workflow
             h2.skills__workflow-title Workflow
             .skills__circles
-                .skills__circles--git
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-git(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text GIT
-                .skills__circles--gulp
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-gulp(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text Gulp
-                .skills__circles--terminal
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-terminal(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text Terminal
-                .skills__circles--webpack
-                    svg.circles-svg(viewBox='0 0 120 120' width='120' height='120')
-                        circle.back(r='45' cx='50%' cy='50%')
-                        circle.front-webpack(r='45' cx='50%' cy='50%')
-                    p.skills__circles--text Webpack
-        img.skills__backpack(role="img" src="/src/images/content/backpack.png")
+                +skill('GIT', 'git')
+                +skill('Gulp', 'gulp')
+                +skill('Terminal', 'terminal')
+                +skill('Webpack', 'webpack')
+    //+image('backpack', 'skills__backpack') написала через миксин, но почему-то пишет что не компилится
+    img.skills__backpack(role="img" src="/src/images/content/backpack.png")
