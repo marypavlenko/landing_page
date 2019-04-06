@@ -1,0 +1,38 @@
+.footer-menu {
+  display: flex;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 100px;
+  flex-wrap: wrap;
+
+  @include tablets() {
+    flex-direction: row;
+    justify-content: initial;
+    margin: 30px 0;
+    width: initial;
+    height: initial;
+  }
+}
+
+.footer-menu__item {
+  margin-right: 20px;
+}
+
+.fiiter-menu__link {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.fiiter-menu__link:hover {
+  color: $links-color;
+  font-weight: 600;
+  text-decoration: underline;
+}

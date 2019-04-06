@@ -1,14 +1,15 @@
 footer.footer
-    .footer__author
-        h1.footer__author--year © 2019
-        h2.footer__author--name Maria Pavlenko
-        p.footer__author--discriptions Personal website of developer
-    include menu
-    .footer__discriptions
-        p.footer__discriptions--text I made this site as part of my studies at frontend development. I will refresh my content in it a little later. In the meantime, see how everything is cool and beautiful!
-        include socials
-    .footer__quote
-        p.footer__quote--text “Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.”
-        p.footer__quote--author Martin Golding
-        include socials
-        +socials('footer')
+    .footer__wrapper
+    .footer__content
+        .footer__author
+            h2.footer__author--year © 2019
+            h3.footer__author--name Maria Pavlenko
+            p.footer__author--discriptions Personal website of developer
+        .footer__nav
+            include menu-footer
+            .footer__discriptions
+                p.footer__discriptions--text I made this site as part of my studies at frontend development. I will refresh my content in it a little later. In the meantime, see how everything is cool and beautiful!
+            +socials('footer')
+            .footer__quote
+                p.footer__discriptions--text “Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.”
+                p.footer__quote--author Martin Golding

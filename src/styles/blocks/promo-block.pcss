@@ -1,85 +1,92 @@
-.promo-block {
+.promo__block {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  min-height: 670px;
+  height: 250px;
+  min-height: 200px;
 
-  @include phones() {
-    height: 250px;
-    min-height: 200px;
+  @include tablets() {
+    height: 100vh;
+    min-height: 670px;
+    display: flex;
+    align-items: center;
   }
 }
-.promo-block__content {
+.promo__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
-}
-.promo-block__content--item {
-  display: flex;
-  flex-direction: row;
 
   @include tablets() {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-}
-.promo__text {
-  opacity: 0.4;
-  color: $text-color;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
 
-  @include desktopHd() {
-    width: 162px;
-    text-align: end;
-    margin: 0 30px;
+  &--text {
+    opacity: 0.4;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+
+    @include desktopHd() {
+      width: 162px;
+      text-align: end;
+      margin: 0 30px;
+    }
+
+    @include tablets() {
+      width: initial;
+      text-align: center;
+      margin-bottom: 30px;
+    }
   }
-  @include tablets() {
-    width: initial;
+
+  &--title {
+    color: $text-color;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 48px;
     text-align: center;
-    margin-bottom: 30px;
+    width: 230px;
+
+    @include desktopHd() {
+      margin: 0 300px 0px 0px;
+      flex-wrap: wrap;
+      width: 230px;
+    }
+
+    @include tablets() {
+      width: 230px;
+      margin: 0;
+    }
   }
 }
-.promo__title {
-  color: $text-color;
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 48px;
 
-  @include desktopHd() {
-    margin: 0 300px 0px 0px;
-    flex-wrap: wrap;
-    width: 100px;
-  }
+.promo__scroll {
+  display: none;
+
   @include tablets() {
-    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-top: 15%;
+  }
+
+  &--text {
+    color: $text-color;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
     margin: 0;
   }
-}
-.promo__scroll {
-  display: flex;
-  justify-content: space-between;
-  width: 100px;
-  margin-top: 15%;
 
-  @include tablets() {
-    display: none;
+  &--icon {
+    width: 20px;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
   }
-}
-.promo__scroll-text {
-  color: $text-color;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 0;
-}
-.promo__scroll-icon {
-  width: 20px;
-  height: 30px;
-  border: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
 }

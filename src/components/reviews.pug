@@ -1,9 +1,11 @@
 .reviews
     .reviews__content
-        h1.reviews__title What there are say about my work
+        h1.reviews__title People talking about me
         .reviews__arrows
-            .reviews__arrows--right
-            .reviews__arrows--left
+            button.reviews__button
+                +icon('arrow', 'reviews__arrow reviews__arrow--right')
+            button.reviews__button
+                +icon('arrow', 'reviews__arrow reviews__arrow--left')
         .reviews__block
             p.reviews__text This girl learning web development! 4 months only the most difficult trials and sleepless nights!
             .reviews__author

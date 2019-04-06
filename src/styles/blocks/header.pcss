@@ -1,11 +1,11 @@
 .header {
   display: flex;
   justify-content: space-between;
-  justify-content: space-between;
   align-items: center;
   margin: 65px 0;
 }
 .button__burger {
+  display: block;
   border: 0;
   width: 24px;
   height: 25px;
@@ -14,13 +14,11 @@
   background-color: transparent;
   background-repeat: no-repeat;
 
-  @include desktopHd() {
-    display: none;
-  }
   @include desktop() {
     display: none;
   }
+
   @include tablets() {
-    display: block;
+    display: none;
   }
 }

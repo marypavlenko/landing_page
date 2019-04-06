@@ -1,37 +1,127 @@
+.works__content {
+
+  @include desktop() {
+    display: flex;
+  }
+}
+
 .works__title {
   color: $text-color;
+  text-align: center;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
 }
+
+.works__picture {
+  //position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  min-height: 190px;
+}
+
+.works__content-img {
+
+  @include desktop() {
+    flex-basis: 60%;
+  }
+}
+
+.works__slider {
+  display: none;
+}
+
+.works__arrows-block {
+  display: flex;
+}
+.works__arrows-item {
+  display: flex;
+  width: 51px;
+  height: 51px;
+  background-color: $arrows;
+  justify-content: center;
+  align-items: center;
+
+  &--top {
+    transform: rotate(-90deg);
+  }
+
+  &--down {
+    transform: rotate(90deg);
+  }
+}
+
+.works__arrow {
+  width: 8px;
+  height: 10px;
+  fill: white;
+}
+
+.works__arrow:hover {
+  opacity: 0.3;
+}
+
+.works__content-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop() {
+    flex-basis: 20%;
+    margin: 100px;
+  }
+}
+
 .works__technology {
   display: flex;
-  justify-content: space-around;
-  margin: 60px auto;
+  justify-content: center;
 }
-.works__technology--item {
+
+.works__technology-item {
   display: inline-block;
   border-radius: 20px;
-  background-color: #eaeaea;
+  background-color: $button-bg;
   opacity: .5;
+  margin: 10px;
+
+  &--text {
+    margin: 15px;
+    z-index: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
 }
-.works__technology-text {
-  margin: 15px;
-  z-index: 1;
-  color: $text-color;
-  font-size: 16px;
-  font-weight: 600;
-}
-.works__text {
-  opacity: 0.5;
-  color: $text-color;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-}
-.works__school-link {
-  display: flex;
-  align-items: center;
+
+.works__school {
+
+  @include tablets() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--title {
+    color: $text-color;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &--text {
+    opacity: 0.5;
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &--link {
+    display: flex;
+    align-items: center;
+  }
 
   &--icon {
     width: 15px;
@@ -39,7 +129,8 @@
     margin-right: 20px;
     fill: $links-color;
   }
-  &--text {
+
+  &--preview {
     margin: 0;
     color: $links-color;
     font-size: 14px;

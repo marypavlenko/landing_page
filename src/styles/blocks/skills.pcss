@@ -1,18 +1,20 @@
 .skills {
-  @include desktopHd() {
-    display: flex;
-    position: relative;
-    margin-bottom: 15%;
-    margin-top: 50px
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30%;
+
   @include tablets() {
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 0;
+    flex-direction: row;
+    margin: auto 5% 5% 30%;
   }
-  @include phones() {
+
+  @include desktopHd() {
+    position: relative;
+    margin: auto 20% 5% 20%;
   }
 }
+
 .skills__title {
   margin-top: 50px;
   color: $text-color;
@@ -20,145 +22,154 @@
   font-weight: 700;
   line-height: 36px;
 }
+
 .skills__text {
   opacity: 0.5;
   color: $text-color;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 
   @include tablets() {
     text-align: center;
   }
-  @include phones() {
-    text-align: initial;
-  }
 }
-.skills__circles {
-  display: flex;
 
-  @include phones() {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-.circles-svg {
-  transform: rotate(-90deg);
-}
-.skills__back {
-  fill: none;
-  stroke-width: 10px;
-  stroke: #eaeaea;
-}
-.skills__front--html {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 70 255;
-}
-.skills__front--css {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 80 255;
-}
-.skills__front--javascript {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 30 255;
-}
-.skills__front--jquery {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 70 255;
-}
-.skills__front--git {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 140 255;
-}
-.skills__front--gulp {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 20 255;
-}
-.skills__front--terminal {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 90 255;
-}
-.skills__front--webpack {
-  fill: none;
-  stroke: $links-color;
-  stroke-width: 20px;
-  stroke-dasharray: 110 255;
-}
-.skills__item {
-  position: relative;
-  display: flex;
-  width: 127px;
-  height: 123px;
-}
-.skills__circles--text {
-  transform: translate(50%, -50%);
-  top: 50%;
-  right: 50%;
-  position: absolute;
-  opacity: 0.5;
-  color: $text-color;
-  font-size: 16px;
-  font-weight: 600;
-}
 .skills__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @include desktopHd() {
-    margin-left: 35%;
-    align-items: initial;
-  }
   @include tablets() {
     margin-left: 0;
     align-items: center;
   }
+
+  @include desktopHd() {
+    margin-left: 35%;
+    align-items: initial;
+  }
 }
-.skills__frontend,
-.skills__workflow {
+
+.skills__circles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &--svg {
+    transform: rotate(-90deg);
+  }
+
+  &--back {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #eaeaea;
+  }
+
+  &--text {
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    opacity: 0.5;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.skills__item {
+  position: relative;
+  display: flex;
+  margin: 10px;
+  width: 127px;
+  height: 123px;
+}
+
+.skills__workflow,
+.skills__front {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include tablets() {
+    align-items: center;
+    margin: 20px 0;
+  }
 
   @include desktopHd() {
     margin: 0;
     align-items: initial;
   }
-  @include tablets() {
-    align-items: center;
-    margin: 20px 0;
+
+  &--html {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 70 255;
+  }
+
+  &--css {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 80 255;
+  }
+
+  &--javascript {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 30 255;
+  }
+
+  &--jquery {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 70 255;
+  }
+
+  &--git {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 140 255;
+  }
+
+  &--gulp {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 40 255;
+  }
+
+  &--terminal {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 90 255;
+  }
+
+  &--webpack {
+    fill: none;
+    stroke: $links-color;
+    stroke-width: 20px;
+    stroke-dasharray: 110 255;
   }
 }
+
 .skills__backpack {
-  @include desktopHd() {
+  width: 270px;
+  height: 240px;
+  margin-top: 10%;
+
+  @include tablets() {
     width: 712px;
     height: 627px;
     position: absolute;
-    left: -300px;
-  }
-  @include tablets() {
-    width: 316px;
-    height: 281px;
-    position: initial;
-    left: 0;
-  }
-  @include phones() {
-    width: 270px;
-    height: 240px;
+    left: -200px;
+    margin-top: 0;
   }
 }

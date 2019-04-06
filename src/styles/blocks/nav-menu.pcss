@@ -1,18 +1,35 @@
 .nav-menu {
+    display: none;
+
+    @include desktop() {
+        display: flex;
+    }
+
     @include tablets() {
-        display: none;
+        display: flex;
     }
 }
 .nav-menu__list {
-    display: flex;
-    justify-content: center;
+    display: none;
+
+    @include desktop() {
+        display: flex;
+}
+
+    @include tablets() {
+        display: flex;
+        justify-content: center;
+    }
 }
 .nav-menu__item {
-    flex-wrap: nowrap;
-    margin: 10% 10%;
 
     @include desktop() {
         margin: auto 20px;
+    }
+
+    @include tablets() {
+        flex-wrap: nowrap;
+        margin: 5% 5%;
     }
 }
 .nav-menu__link {

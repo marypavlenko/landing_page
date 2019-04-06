@@ -1,0 +1,79 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__wrapper {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  min-height: 740px;
+  background-color: #1f232d;
+}
+
+.footer__content {
+
+  @include tablets() {
+    display: flex;
+  }
+}
+
+.footer__author {
+
+  @include tablets() {
+    flex-basis: 20%;
+  }
+
+  &--year {
+    opacity: 0.1;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  &--name {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &--discriptions {
+    opacity: 0.15;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.footer__nav {
+
+  @include tablets() {
+    flex-basis: 70%;
+  }
+}
+
+.footer__discriptions {
+  &--text {
+    opacity: 0.3;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.footer__quote {
+  margin-bottom: 40px;
+
+  &--author {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 24px;
+  }
+}
