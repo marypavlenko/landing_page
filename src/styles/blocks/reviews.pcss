@@ -2,16 +2,37 @@
   position: relative;
   margin: 100px 0;
 }
+
+.reviews__header {
+
+  @include tablets() {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-evenly;
+  }
+}
+
 .reviews__title {
   color: $text-color;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   margin: 80px auto 60px;
+  text-align: center;
+
+  @include tablets() {
+    margin: 0;
+  }
 }
 
 .reviews__arrows {
   display: flex;
+  justify-content: center;
+
+  @include tablets() {
+    margin: 0;
+  }
 }
 
 .reviews__button {
@@ -37,6 +58,20 @@
 
   &--left {
     transform: rotate(0deg);
+  }
+}
+
+.reviews__blocks {
+
+  @include tablets() {
+    width: 100%;
+    display: flex;
+  }
+
+  &--item {
+    @include tablets() {
+      margin: 0 40px;
+    }
   }
 }
 

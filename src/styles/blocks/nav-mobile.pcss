@@ -5,28 +5,29 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: $text-color;
+  z-index: 2;
+  background-color: #fff;
 
   @include tablets() {
     display: none;
   }
 }
 .nav-mobile__close-btn {
-  display: none;
   position: absolute;
   width: 20px;
   height: 20px;
+  top: 20px;
+  right: 20px;
+  background-size: cover;
   background-image: url(/src/images/icons/cross.svg);
-
-  @include tablets() {
-    display: none;
-  }
 }
 .nav-mobile__list {
   display: flex;
   flex-direction: column;
   margin-left: 25px;
   align-items: start;
+  margin-left: 20%;
+  margin-top: 20%;
 }
 .nav-mobile__item {
   color: $text-color;

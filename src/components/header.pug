@@ -1,7 +1,6 @@
 header.header
     include logo
-    include nav-menu
+    +nav('nav-menu')
     include nav-mobile
-    include socials
     +socials('header')
-    button.button__burger
+    button.button__burger.js-open-menu

@@ -1,8 +1,14 @@
 .works__content {
+  height: 600px;
 
   @include desktop() {
     display: flex;
   }
+}
+
+.works__content-slider {
+  position: relative;
+  margin: 0 -50px;
 }
 
 .works__title {
@@ -14,7 +20,6 @@
 }
 
 .works__picture {
-  //position: absolute;
   z-index: -1;
   left: 0;
   right: 0;
@@ -22,6 +27,7 @@
 }
 
 .works__content-img {
+  position: absolute;
 
   @include desktop() {
     flex-basis: 60%;
@@ -34,6 +40,8 @@
 
 .works__arrows-block {
   display: flex;
+  position: absolute;
+  right: 0;
 }
 .works__arrows-item {
   display: flex;
