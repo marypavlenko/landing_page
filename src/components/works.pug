@@ -2,17 +2,20 @@
     h2.works__title My works
     .works__content
         .works__content-slider
-            .works__content-img
-                img.works__picture(src="/src/images/content/works/parachute.jpg" role="presentation")
-            ul.works__slider
-                li.works__item
-                    img.works__item--picture(src="/src/images/content/works/city.jpg" role="presentation")
-                li.works__item
-                    img.works__item--picture(src="/src/images/content/works/car.jpg" role="presentation")
-                li.works__item
-                    img.works__item--picture(src="/src/images/content/works/forest.jpg" role="presentation")
-                li.works__item
-                    img.works__item--picture(src="/src/images/content/works/valley.jpg" role="presentation")
+            .work__slide-numb
+                .works__content-img
+                    img.works__picture(src="/src/images/content/works/parachute.jpg" role="presentation")
+                ul.works__slider
+                    li.works__item
+                        img.works__item--picture(src="/src/images/content/works/city.jpg" role="presentation")
+                    li.works__item
+                        img.works__item--picture(src="/src/images/content/works/car.jpg" role="presentation")
+                    li.works__item
+                        img.works__item--picture(src="/src/images/content/works/forest.jpg" role="presentation")
+                    li.works__item
+                        img.works__item--picture(src="/src/images/content/works/valley.jpg" role="presentation")
+                .works__numbers
+                    .works__numbers--item 2
             .works__arrows-block
                 button.works__arrows-item
                     +icon('arrow', 'works__arrow works__arrows-item--top')

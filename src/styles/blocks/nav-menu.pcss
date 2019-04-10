@@ -12,13 +12,13 @@
 .nav-menu__list {
     display: none;
 
-    @include desktop() {
-        display: flex;
-}
-
     @include tablets() {
         display: flex;
         justify-content: center;
+    }
+
+    @include desktop() {
+        display: flex;
     }
 }
 .nav-menu__item {

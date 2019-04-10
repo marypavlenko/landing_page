@@ -1,14 +1,25 @@
+.works {
+
+  @include desktop() {
+    margin: 10% 0;
+  }
+}
+
 .works__content {
-  height: 600px;
 
   @include desktop() {
     display: flex;
+    margin-bottom: 15%;
   }
 }
 
 .works__content-slider {
   position: relative;
   margin: 0 -50px;
+
+  @include tablets() {
+    margin: initial;
+  }
 }
 
 .works__title {
@@ -23,11 +34,14 @@
   z-index: -1;
   left: 0;
   right: 0;
-  min-height: 190px;
+
+  @include tablets() {
+    width: 628px;
+    height: 354px;
+  }
 }
 
 .works__content-img {
-  position: absolute;
 
   @include desktop() {
     flex-basis: 60%;
@@ -42,7 +56,34 @@
   display: flex;
   position: absolute;
   right: 0;
+  bottom: 0;
+
+  @include tablets() {
+    bottom: initial;
+    right: 20%;
+  }
 }
+
+.work__slide-numb {
+
+  @include tablets() {
+    display: flex;
+  }
+}
+
+.works__numbers--item {
+  display: none;
+
+  @include tablets() {
+    display: block;
+    color: #f0f0f0;
+    font-size: 300px;
+    font-weight: 800;
+    line-height: 48px;
+    margin: 50px 40px 0 -40px;
+  }
+}
+
 .works__arrows-item {
   display: flex;
   width: 51px;
@@ -75,15 +116,24 @@
   flex-direction: column;
   align-items: center;
 
+  @include tablets() {
+    margin: 100px;
+  }
+
   @include desktop() {
     flex-basis: 20%;
-    margin: 100px;
+    margin: initial
   }
 }
 
 .works__technology {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+
+  @include tablets() {
+    margin-top: 15%;
+  }
 }
 
 .works__technology-item {
