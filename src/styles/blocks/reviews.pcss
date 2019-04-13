@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 30px;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 
@@ -18,11 +18,11 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-  margin: 80px auto 60px;
+  margin: 50px;
   text-align: center;
 
   @include tablets() {
-    margin: 0;
+    margin: 50px;
   }
 }
 
@@ -31,7 +31,7 @@
   justify-content: center;
 
   @include tablets() {
-    margin: 0;
+    margin: 40px;
   }
 }
 
@@ -66,11 +66,13 @@
   @include tablets() {
     width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   &--item {
     @include tablets() {
       margin: 0 40px;
+      width: 400px;
     }
   }
 }
@@ -87,12 +89,12 @@
 
   &--avatar {
     margin-right: 30px;
-    width: 75px;
-    height: 75px;
+    width: 51px;
+    height: 51px;
 
-    @include phones() {
-      width: 51px;
-      height: 51px;
+    @include tablets() {
+      width: 75px;
+      height: 75px;
     }
   }
   &--name {

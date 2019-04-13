@@ -7,10 +7,14 @@
   flex-direction: column;
   align-items: center;
 
+  @include desktop() {
+    width: 80%;
+  }
+
   &--item {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
     margin: 30px 10px;
   }
 
@@ -27,6 +31,7 @@
 }
 
 .contact__info {
+  width: 100%;
 
   @include tablets() {
     display: flex;
@@ -41,7 +46,7 @@
   text-align: center;
 }
 .form__control {
-  width: 300px;
+  width: 100%;
   font-size: 13px;
   padding: 6px 0 4px 10px;
   border: none;
@@ -51,6 +56,7 @@
 
 .contact__text {
   opacity: 0.3;
+  margin-left: 10%;
   color: #414c63;
   font-size: 14px;
   font-weight: 400;
@@ -62,5 +68,5 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  text-align: center;
+  padding-left: 10%;
 }

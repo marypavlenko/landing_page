@@ -24,16 +24,16 @@
     overflow: hidden;
   }
 }
+
 .parallax__layer {
   display: none;
 
   @include tablets() {
-      position: absolute;
-      z-index: -1;
-      bottom: 0;
-      clip-path: polygon(0% 0%, 0% 80%, 50% 100%, 100% 80%, 100% 0%);
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    clip-path: polygon(0% 0%, 0% 80%, 50% 100%, 100% 80%, 100% 0%);
   }
-
   &--clouds {
     @include tablets() {
       top: 0;

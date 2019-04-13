@@ -1,5 +1,9 @@
 .works {
 
+  @include tablets() {
+    margin: 80px 0;
+  }
+
   @include desktop() {
     margin: 10% 0;
   }
@@ -20,6 +24,10 @@
   @include tablets() {
     margin: initial;
   }
+
+  @include desktop() {
+    flex-basis: 60%;
+  }
 }
 
 .works__title {
@@ -28,28 +36,29 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
+  margin-bottom: 50px;
 }
 
 .works__picture {
-  z-index: -1;
-  left: 0;
-  right: 0;
 
   @include tablets() {
-    width: 628px;
-    height: 354px;
-  }
-}
-
-.works__content-img {
-
-  @include desktop() {
-    flex-basis: 60%;
+    width: 100%;
   }
 }
 
 .works__slider {
   display: none;
+
+  @include tablets() {
+    display: block;
+  }
+}
+
+.works__item {
+
+  @include tablets() {
+    height: 100px;
+  }
 }
 
 .works__arrows-block {
@@ -60,7 +69,6 @@
 
   @include tablets() {
     bottom: initial;
-    right: 20%;
   }
 }
 
@@ -71,16 +79,24 @@
   }
 }
 
-.works__numbers--item {
+.works__numbers {
   display: none;
 
-  @include tablets() {
+  @include desktop() {
     display: block;
-    color: #f0f0f0;
-    font-size: 300px;
-    font-weight: 800;
-    line-height: 48px;
-    margin: 50px 40px 0 -40px;
+  }
+
+  &--item {
+    display: none;
+
+    @include desktop() {
+      display: block;
+      color: #f0f0f0;
+      font-size: 300px;
+      font-weight: 800;
+      line-height: 48px;
+      margin: 50px 40px 0 -40px;
+    }
   }
 }
 
@@ -90,7 +106,6 @@
   height: 51px;
   background-color: $arrows;
   justify-content: center;
-  align-items: center;
 
   &--top {
     transform: rotate(-90deg);
@@ -115,10 +130,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include tablets() {
-    margin: 100px;
-  }
+  margin-bottom: 50px;
 
   @include desktop() {
     flex-basis: 20%;
