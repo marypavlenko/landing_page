@@ -1,37 +1,35 @@
 .works
     h2.works__title My works
-    .works__content
+    .works__content.js-slider
         .works__content-slider
             .work__slide-numb
                 .works__content-img
-                    img.works__picture(src="/src/images/content/works/parachute.jpg" role="presentation")
+                    img.works__picture.js-main-slide(src="" role="presentation")
                 ul.works__slider
                     li.works__item
                         img.works__item--picture(src="/src/images/content/works/city.jpg" role="presentation")
                     li.works__item
-                        img.works__item--picture(src="/src/images/content/works/car.jpg" role="presentation")
-                    li.works__item
-                        img.works__item--picture(src="/src/images/content/works/forest.jpg" role="presentation")
-                    li.works__item
                         img.works__item--picture(src="/src/images/content/works/valley.jpg" role="presentation")
+                    li.works__item
+                        img.works__item--picture(src="/src/images/content/works/parachute.jpg" role="presentation")
             .works__arrows-block
-                button.works__arrows-item
+                button.works__arrows-item.js-scroll-up
                     +icon('arrow', 'works__arrow works__arrows-item--top')
-                button.works__arrows-item
+                button.works__arrows-item.js-scroll-down
                     +icon('arrow', 'works__arrow works__arrows-item--down')
         .works__numbers
             .works__numbers--item 2
         .works__content-tech
-            .works__technology
-                .works__technology-item
-                    p.works__technology-item--text HTML
-                .works__technology-item
-                    p.works__technology-item--text CSS
-                .works__technology-item
-                    p.works__technology-item--text Javascript
+            .works__technology.js-slide-tags
+                //.works__technology-item.js-slide-tag
+                //    p.works__technology-item--text HTML
+                //.works__technology-item.js-slide-tag
+                //    p.works__technology-item--text CSS
+                //.works__technology-item.js-slide-tag
+                //    p.works__technology-item--text Javascript
             .works__school
-                h2.works__school--title School website
-                p.works__school--text This girl learning web development! 4 months only the most difficult trials and sleepless nights!
-                a.works__school--link
+                h2.works__school--title.js-slide-title
+                p.works__school--text.js-slide-description
+                a.works__school--link.js-slide-link
                     +icon('link', 'works__school--icon')
                     p.works__school--preview View site
