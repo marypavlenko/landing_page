@@ -56,7 +56,7 @@
 
 .contact__text {
   opacity: 0.3;
-  margin-left: 10%;
+  margin-left: 50px;
   color: #414c63;
   font-size: 14px;
   font-weight: 400;
@@ -68,5 +68,57 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  padding-left: 10%;
+  padding-left: 50px;
+}
+
+.contact__form--icon {
+  display: flex;
+}
+
+.contact__icon {
+  fill: $text-color;
+  opacity: 0.3;
+  position: absolute;
+
+  &--avatar {
+    display: none;
+
+    @include tablets() {
+      display: none;
+    }
+
+    @include desktop() {
+      display: block;
+      width: 26px;
+      height: 30px;
+    }
+  }
+
+  &--envelope {
+    display: none;
+
+    @include tablets() {
+      display: none;
+    }
+
+    @include desktop() {
+      display: block;
+      width: 30px;
+      height: 23px;
+    }
+  }
+
+  &--message {
+    display: none;
+
+    @include tablets() {
+      display: none;
+    }
+
+    @include desktop() {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

@@ -1,22 +1,22 @@
 const slides = [
     {
-        title: 'title 1',
+        title: 'UX Research Pages',
         image: '/src/images/content/works/parachute.jpg',
         tags: ['HTML', 'CSS', 'JavaScript'],
         description: 'This girl learning web development! 4 months only the most difficult trials and sleepless nights!',
         link: '#',
     },
     {
-        title: 'title 2',
+        title: 'UX Profile Page',
         image: '/src/images/content/works/valley.jpg',
-        tags: ['HTML', 'CSS', 'JavaScript'],
+        tags: ['LESS', 'Bootstrap', 'PUG'],
         description: 'This girl learning web development! 4 months only the most difficult trials and sleepless nights!',
         link: '#',
     },
     {
-        title: 'title 3',
+        title: 'Landing page for a burgers restaurant',
         image: '/src/images/content/works/city.jpg',
-        tags: ['HTML', 'CSS', 'JavaScript'],
+        tags: ['Webpack', 'SASS', 'Git'],
         description: 'This girl learning web development! 4 months only the most difficult trials and sleepless nights!',
         link: '#',
     }
