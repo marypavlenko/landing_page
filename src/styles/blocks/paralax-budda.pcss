@@ -1,18 +1,16 @@
 .paralax-budda {
   display: flex;
   flex-direction: column;
-}
-
-.paralax-budda__wrapper {
-  margin-bottom: 100px;
+  height: 100%;
 }
 
 .budda {
   position: absolute;
+  //height: 100%; наследуется от wrapper, подумать как решить проблемму
   z-index: -1;
   left: 0;
   right: 0;
-  min-height: 1000px;
+  height: 25%;
   background-image: url('../images/content/budda.png');
   background-size: cover;
   background-repeat: no-repeat;

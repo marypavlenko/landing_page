@@ -50,7 +50,9 @@ function fillSlider() {
     tags.innerHTML = '';
 
     slides[currentSlide].tags.forEach(function (tag) {
-        const newElement = document.createElement('div.works__technology-item');
+        const newElement = document.createElement('div');
+
+        newElement.classList.add('works__technology-item');
 
         newElement.innerText = tag;
         tags.appendChild(newElement);
