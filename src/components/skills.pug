@@ -2,7 +2,7 @@
     .skills__content
         h2.skills__title My skills and experience
         p.skills__text I made this site as part of web development training. I will refresh my content in it a little later. In the meantime, see how everything is cool and beautiful!
-        .skills__front
+        .skills__frontend
             h2.skills__title Front-end
             .skills__circles
 
@@ -10,7 +10,7 @@
                     div(class='skills__item skills__item--' + mod)
                         svg.skills__circles--svg(viewBox='0 0 120 120' width='125' height='125')
                             circle.skills__circles--back(r='50' cx='50%' cy='50%')
-                            circle(class='skills__front skills__front--' + mod r='50' cx='50%' cy='50%')
+                            circle(class='skills__frontend skills__frontend--' + mod r='50' cx='50%' cy='50%')
                         .skills__circles--text=text
 
                 +skill('HTML5', 'html')
@@ -24,5 +24,4 @@
                 +skill('Gulp', 'gulp')
                 +skill('Terminal', 'terminal')
                 +skill('Webpack', 'webpack')
-    //+image('backpack', 'skills__backpack') написала через миксин, но почему-то пишет что не компилится
     img.skills__backpack(role="img" src="/src/images/content/backpack.png")
