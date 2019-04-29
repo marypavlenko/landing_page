@@ -67,6 +67,7 @@
 
 .reviews__blocks {
   position: relative;
+  display: flex;
   transition: transform 1s;
 
   @include tablets() {
@@ -75,6 +76,10 @@
   }
 
   &--item {
+    flex-basis: 100%;
+    padding: 0 2.5rem;
+    min-width: 100%;
+
     @include tablets() {
       padding: 0 40px;
       min-width: 50%;

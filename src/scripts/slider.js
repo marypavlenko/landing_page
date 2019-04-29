@@ -1,24 +1,24 @@
 const slides = [
     {
         title: 'UX Research Pages',
-        image: '/src/images/content/works/parachute.jpg',
+        image: '/src/images/content/works/ux_research_pages.jpg',
         tags: ['HTML', 'CSS', 'JavaScript'],
-        description: 'This girl learning web development! 4 months only the most difficult trials and sleepless nights!',
-        link: '#',
+        description: 'Lecture and other learning resources about User Experience Research for designers, managers, and developers.',
+        link: 'https://github.com/ux-research-pages/UX-Research',
     },
     {
         title: 'UX Profile Page',
-        image: '/src/images/content/works/valley.jpg',
+        image: '/src/images/content/works/ux_profile_page.jpg',
         tags: ['LESS', 'Bootstrap', 'PUG'],
-        description: 'This girl learning web development! 4 months only the most difficult trials and sleepless nights!',
-        link: '#',
+        description: 'This page I collected everything I did when I worked as a User Experience Researcher.',
+        link: 'https://marypavlenko.github.io/UX-Profile/',
     },
     {
         title: 'Landing page for a burgers restaurant',
-        image: '/src/images/content/works/city.jpg',
+        image: '/src/images/content/works/burger.jpg',
         tags: ['Webpack', 'SASS', 'Git'],
-        description: 'This girl learning web development! 4 months only the most difficult trials and sleepless nights!',
-        link: '#',
+        description: 'The first training work to practice layout skill. Mentor: Olga Bolotova (@OlBol)',
+        link: 'https://marypavlenko.github.io/burgers/',
     }
 ];
 
