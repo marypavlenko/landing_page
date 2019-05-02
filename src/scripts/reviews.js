@@ -1,9 +1,9 @@
 const slideConteiner = document.querySelector('.reviews__blocks');
 const childSlide = slideConteiner.children;
 let currentPosition = 0;
-const buttons = document.querySelector('.reviews__arrows');
-const leftBtn = buttons.querySelector('.reviews__button--left');
-const rightBtn = buttons.querySelector('.reviews__button--right');
+const buttons = document.querySelector('.reviews__buttons');
+const leftBtn = buttons.querySelector('.reviews__btn--left');
+const rightBtn = buttons.querySelector('.reviews__btn--right');
 console.log(childSlide[0], buttons, leftBtn, rightBtn);
 
 leftBtn.addEventListener('click', function () {

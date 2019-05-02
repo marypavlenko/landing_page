@@ -30,7 +30,10 @@ const slideDescription = slider.querySelector('.js-slide-description');
 const slideLink = slider.querySelector('.js-slide-link');
 const upSlide = slider.querySelector('.js-scroll-up');
 const downSlide = slider.querySelector('.js-scroll-down');
+const previewPicture = slider.querySelector('.js-small-slide');
 let currentSlide = 0;
+
+console.log(previewPicture);
 
 function slideLimiter(value) {
     if (value >= slides.length) {
@@ -48,6 +51,21 @@ function fillSlider() {
     slideDescription.innerText = slides[currentSlide].description;
     slideLink.href = slides[currentSlide].link;
     tags.innerHTML = '';
+
+    // for (previewPicture.length = 0; previewPicture.length > 3; previewPicture.length++) {
+    //     upSlide.addEventListener('click', function () {
+    //         previewPicture.classList.remove(activeClass);
+    //     };
+    // };
+
+
+    // for (var i = 0; i < previewPicture.length; i++) {
+    //     upSlide.addEventListener('click', function () {
+    //         previewPicture.classList.remove(activeClass);
+    //     };
+    // }
+    //
+    // previewPicture[currentSlide].classList.add('works__item--active');
 
     slides[currentSlide].tags.forEach(function (tag) {
         const newElement = document.createElement('div');

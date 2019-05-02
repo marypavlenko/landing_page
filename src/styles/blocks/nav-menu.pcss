@@ -1,46 +1,49 @@
 .nav-menu {
-    display: none;
+  display: none;
 
-    @include desktop() {
-        display: flex;
-    }
+  @include desktop() {
+    display: flex;
+  }
 
-    @include tablets() {
-        display: flex;
-    }
+  @include tablets() {
+    display: flex;
+  }
 }
+
 .nav-menu__list {
-    display: none;
+  display: none;
 
-    @include tablets() {
-        display: flex;
-        justify-content: center;
-    }
+  @include tablets() {
+    display: flex;
+    justify-content: center;
+  }
 
-    @include desktop() {
-        display: flex;
-    }
+  @include desktop() {
+    display: flex;
+  }
 }
+
 .nav-menu__item {
+  @include desktop() {
+    margin: auto 20px;
+  }
 
-    @include desktop() {
-        margin: auto 20px;
-    }
-
-    @include tablets() {
-        margin: 5% 5%;
-    }
+  @include tablets() {
+    margin: 5% 5%;
+  }
 }
+
 .nav-menu__link {
-    color: $text-color;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 30px;
-    text-decoration: none;
-    white-space: nowrap;
+  color: $text-color;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+  white-space: nowrap;
 }
+
 .nav-menu__link:hover {
-    color: $links-color;
-    font-weight: 600;
-    text-decoration: underline;
+  color: $links-color;
+  font-weight: 600;
+  text-decoration: underline;
 }

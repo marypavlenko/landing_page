@@ -1,5 +1,4 @@
 .works {
-
   @include tablets() {
     margin: 80px 0;
   }
@@ -10,14 +9,13 @@
 }
 
 .works__content {
-
   @include desktop() {
     display: flex;
     margin-bottom: 15%;
   }
 }
 
-.works__content-slider {
+.works__slider {
   position: relative;
   margin: 0 -50px;
 
@@ -40,13 +38,12 @@
 }
 
 .works__picture {
-
   @include tablets() {
     width: 100%;
   }
 }
 
-.works__slider {
+.works__items {
   display: none;
 
   @include tablets() {
@@ -58,13 +55,12 @@
 }
 
 .works__item {
-
   @include tablets() {
     height: 100px;
   }
 }
 
-.works__arrows-block {
+.works__arrows {
   display: flex;
   position: absolute;
   right: 0;
@@ -75,8 +71,7 @@
   }
 }
 
-.work__slide-numb {
-
+.work__slides {
   @include tablets() {
     display: flex;
   }
@@ -129,7 +124,7 @@
   opacity: 0.3;
 }
 
-.works__content-tech {
+.works__tech {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,11 +132,11 @@
 
   @include desktop() {
     flex-basis: 20%;
-    margin: initial
+    margin: initial;
   }
 }
 
-.works__technology {
+.works__tags {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -160,8 +155,7 @@
   background-color: rgba(122,160,197,0.2);
 }
 
-.works__school {
-
+.works__project {
   @include tablets() {
     display: flex;
     flex-direction: column;
