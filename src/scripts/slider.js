@@ -30,7 +30,7 @@ const slideDescription = slider.querySelector('.js-slide-description');
 const slideLink = slider.querySelector('.js-slide-link');
 const upSlide = slider.querySelector('.js-scroll-up');
 const downSlide = slider.querySelector('.js-scroll-down');
-const previewPicture = slider.querySelector('.js-small-slide');
+const previewPicture = slider.querySelectorAll('.js-small-slide');
 let currentSlide = 0;
 
 function slideLimiter(value) {
@@ -51,21 +51,24 @@ function fillSlider() {
     tags.innerHTML = '';
 
     slides[currentSlide].tags.forEach(function (tag) {
-        const newElement = document.createElement('div');
+      const newElement = document.createElement('div');
 
-        newElement.classList.add('works__technology-item');
+      newElement.classList.add('works__technology-item');
 
-        newElement.innerText = tag;
-        tags.appendChild(newElement);
+      newElement.innerText = tag;
+      tags.appendChild(newElement);
     });
+
+    for (var i = 0; i < previewPicture.length; i++) {
+      console.log(previewPicture);
+      previewPicture[i].classList.remove('works__item--active');
+    }
+
+    // previewPicture.classList.add('works__item--active');
 }
 
 upSlide.addEventListener('click', function () {
     currentSlide = slideLimiter(currentSlide - 1);
-    for (var i = 0; i < previewPicture.length; i++) {
-        previewPicture.classList.remove(activeClass);
-    }
-    console.log(previewPicture);
 
     fillSlider();
 
@@ -73,13 +76,8 @@ upSlide.addEventListener('click', function () {
 
 downSlide.addEventListener('click', function () {
     currentSlide = slideLimiter(currentSlide + 1);
-    for (var i = 0; i < previewPicture.length; i++) {
-        previewPicture.classList.remove(activeClass);
-    }
 
     fillSlider();
 });
-
-previewPicture.classList.add('works__item--active');
 
 fillSlider();
