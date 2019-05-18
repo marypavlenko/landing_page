@@ -1,21 +1,21 @@
 const slides = [
     {
         title: 'UX Research Pages',
-        image: '/src/images/content/works/ux_research_pages.jpg',
+        image: '/src/images/ux_research_pages.jpg',
         tags: ['HTML', 'CSS', 'JavaScript'],
         description: 'Lecture and other learning resources about User Experience Research for designers, managers, and developers.',
         link: 'https://github.com/ux-research-pages/UX-Research',
     },
     {
         title: 'UX Profile Page',
-        image: '/src/images/content/works/ux_profile_page.jpg',
+        image: '/src/images/ux_profile_page.jpg',
         tags: ['LESS', 'Bootstrap', 'PUG'],
         description: 'This page I collected everything I did when I worked as a User Experience Researcher.',
         link: 'https://marypavlenko.github.io/UX-Profile/',
     },
     {
         title: 'Landing page for a burgers restaurant',
-        image: '/src/images/content/works/burger.jpg',
+        image: '/src/images/burger.jpg',
         tags: ['Webpack', 'SASS', 'Git'],
         description: 'The first training work to practice layout skill. Mentor: Olga Bolotova (@OlBol)',
         link: 'https://marypavlenko.github.io/burgers/',
@@ -31,6 +31,7 @@ const slideLink = slider.querySelector('.js-slide-link');
 const upSlide = slider.querySelector('.js-scroll-up');
 const downSlide = slider.querySelector('.js-scroll-down');
 const previewPicture = slider.querySelectorAll('.js-small-slide');
+const numberElem = slider.querySelector('.js-number');
 let currentSlide = 0;
 
 function slideLimiter(value) {
@@ -49,6 +50,7 @@ function fillSlider() {
     slideDescription.innerText = slides[currentSlide].description;
     slideLink.href = slides[currentSlide].link;
     tags.innerHTML = '';
+    numberElem.innerText = currentSlide + 1;
 
     slides[currentSlide].tags.forEach(function (tag) {
       const newElement = document.createElement('div');
@@ -59,12 +61,11 @@ function fillSlider() {
       tags.appendChild(newElement);
     });
 
-    for (var i = 0; i < previewPicture.length; i++) {
-      console.log(previewPicture);
+    for (let i = 0; i < previewPicture.length; i++) {
       previewPicture[i].classList.remove('works__item--active');
     }
 
-    // previewPicture.classList.add('works__item--active');
+    previewPicture[currentSlide].classList.add('works__item--active');
 }
 
 upSlide.addEventListener('click', function () {

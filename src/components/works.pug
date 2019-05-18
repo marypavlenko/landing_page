@@ -7,18 +7,17 @@
                     img.works__picture.js-main-slide(src="" role="presentation")
                 ul.works__items
                     li.works__item.js-small-slide
-                        img.works__item--picture(src="/src/images/content/works/burger.jpg" role="presentation")
+                        +image('ux_research_pages.jpg', 'works__item--picture')
                     li.works__item.js-small-slide
-                        img.works__item--picture(src="/src/images/content/works/ux_profile_page.jpg" role="presentation")
+                        +image('ux_profile_page.jpg', 'works__item--picture')
                     li.works__item.js-small-slide.works__item--active
-                        img.works__item--picture(src="/src/images/content/works/ux_research_pages.jpg" role="presentation")
+                        +image('burger.jpg', 'works__item--picture')
             .works__arrows
                 button.works__arrows-item.js-scroll-up
                     +icon('arrow', 'works__arrow works__arrows-item--top')
                 button.works__arrows-item.js-scroll-down
                     +icon('arrow', 'works__arrow works__arrows-item--down')
-        .works__numbers
-            .works__numbers--item 2
+        .works__numbers.js-number
         .works__tech
             .works__tags.js-slide-tags
             .works__project

@@ -6,16 +6,16 @@
                 .contact__form--item
                     label(class='contact__text' for='name') Enter your name
                     .contact__form--icon
-                        img.contact__icon.contact__icon--avatar(role="img" src='/src/images/icons/avatar.svg')
+                        +icon('avatar', 'contact__icon contact__icon--avatar')
                         input#name.contact__control(class="contact__descript"  type='text', placeholder='Dmitry Otman' name='name')
                 .contact__form--item
                     label(class='contact__text' for='email') Enter your email
                     .contact__form--icon
-                        img.contact__icon.contact__icon--envelope(role="img" src='/src/images/icons/envelope.svg')
+                        +icon('envelope', 'contact__icon contact__icon--envelope')
                         input#email.contact__control(class="contact__descript"  type='email', placeholder='dmitriy.otman@ibm.com' name='email')
             .contact__form--item
                 label(class='contact__text' for='message') Enter your message
                 .contact__form--icon
-                    img.contact__icon.contact__icon--message(role="img" src='/src/images/icons/message.svg')
+                    +icon('message', 'contact__icon contact__icon--message')
                     textarea#message.contact__control(class="contact__descript" name="message", placeholder="Your help in site creation is required. Interested in the timing and price issue", cols="40", rows="2")
             input.contact__form--submit(type='submit', value='Submit')

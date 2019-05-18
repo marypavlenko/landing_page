@@ -4,7 +4,6 @@ let currentPosition = 0;
 const buttons = document.querySelector('.reviews__buttons');
 const leftBtn = buttons.querySelector('.reviews__btn--left');
 const rightBtn = buttons.querySelector('.reviews__btn--right');
-console.log(childSlide[0], buttons, leftBtn, rightBtn);
 
 leftBtn.addEventListener('click', function () {
     const elWidth = childSlide[0].offsetWidth;
