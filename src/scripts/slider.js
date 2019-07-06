@@ -1,21 +1,21 @@
 const slides = [
     {
         title: 'UX Research Pages',
-        image: '/src/images/ux_research_pages.jpg',
+        // image: '/ux_research_pages.jpg',
         tags: ['HTML', 'CSS', 'JavaScript'],
         description: 'Lecture and other learning resources about User Experience Research for designers, managers, and developers.',
         link: 'https://github.com/ux-research-pages/UX-Research',
     },
     {
         title: 'UX Profile Page',
-        image: '/src/images/ux_profile_page.jpg',
+        // image: '/ux_profile_page.jpg',
         tags: ['LESS', 'Bootstrap', 'PUG'],
         description: 'This page I collected everything I did when I worked as a User Experience Researcher.',
         link: 'https://marypavlenko.github.io/UX-Profile/',
     },
     {
         title: 'Landing page for a burgers restaurant',
-        image: '/src/images/burger.jpg',
+        // image: '/burger.jpg',
         tags: ['Webpack', 'SASS', 'Git'],
         description: 'The first training work to practice layout skill. Mentor: Olga Bolotova (@OlBol)',
         link: 'https://marypavlenko.github.io/burgers/',
@@ -45,7 +45,6 @@ function slideLimiter(value) {
 }
 
 function fillSlider() {
-    mainSlide.src = slides[currentSlide].image;
     slideTitle.innerText = slides[currentSlide].title;
     slideDescription.innerText = slides[currentSlide].description;
     slideLink.href = slides[currentSlide].link;
@@ -66,6 +65,11 @@ function fillSlider() {
     }
 
     previewPicture[currentSlide].classList.add('works__item--active');
+
+    const activeImg = slider.querySelector('.works__item--active .works__item--picture');
+    const activeAtt = activeImg.getAttribute('src');
+
+    mainSlide.src = activeAtt;
 }
 
 upSlide.addEventListener('click', function () {
