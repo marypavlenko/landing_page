@@ -4,8 +4,26 @@ Training work to practice layout skill.<br>
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and you may be running on your browser for development and testing purposes.<br> 
-To do this, you just need to follow the link - https://marypavlenko.github.io/burgers/ 
+> Before installing dependencies and running the project, make sure that you have the [latest version of Node.js & NPM](https://nodejs.org/en/download/current/) installed, as well as the [latest version of Yarn](https://yarnpkg.com/ru/docs/install).
+
+##  To deploy the project you need:
+```sh
+$ git clone git@github.com:marypavlenko/portfolio.git
+$ cd ls-portfolio
+$ yarn
+```
+
+## Package.json scripts:
+
+| Script | Purpose |
+| ------ | ------ |
+| dev | Launches webpack-dev-server with _ hot-swappable modules |
+| build | Will collected the project for ** production ** (the project is ready to be uploaded to the server) |
+
+#### To run the script you need a command:
+```sh
+$ npm run script_name
+```
 
 ## Authors
 
@@ -15,3 +33,4 @@ To do this, you just need to follow the link - https://marypavlenko.github.io/bu
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
