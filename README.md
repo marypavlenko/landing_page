@@ -1,6 +1,6 @@
 # Project: Landing Page for Portfolio
 
-Training work to practice layout skill.<br>
+Training work to practice layout skill.<br>[link ](https://marypavlenko.github.io/portfolio/dist/)
 
 ## Getting Started
 
