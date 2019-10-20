@@ -1,4 +1,4 @@
-# Project: Landing Page for Portfolio
+# Project: Landing Page for simple Portfolio
 
 Training work to practice layout skill.<br>[link ](https://marypavlenko.github.io/portfolio/dist/)
 
