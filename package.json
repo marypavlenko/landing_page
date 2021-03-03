@@ -50,7 +50,7 @@
   ],
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "vue": "^2.6.7",
     "vue-router": "^3.0.2"
   }
